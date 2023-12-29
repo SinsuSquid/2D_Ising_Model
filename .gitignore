@@ -4,6 +4,7 @@ archive/
 energy.dat
 plot.dat
 magnetization.dat
+result.gif
 
 # Prerequisites
 *.d
