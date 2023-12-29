@@ -1,0 +1,7 @@
+seed= 1215
+meshSize= 100
+coupling= 1
+k= 1
+equilibration_step= 20000000
+T= 2.27
+dumpFreq= 10000

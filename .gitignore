@@ -1,3 +1,10 @@
+# Dump Files
+dump/
+archive/
+energy.dat
+plot.dat
+magnetization.dat
+
 # Prerequisites
 *.d
 
