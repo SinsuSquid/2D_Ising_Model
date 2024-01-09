@@ -3,10 +3,11 @@
 <br>Monte Carlo [_"MON-tee KAR-loh"_], Monaco<br>(Source : Wikipedia)
 
 ## Fundamental Statistical Mechanics
-- Deterministric <br> : "if position($`r(t_0)`$) and momentum($`p(t_0)`$) are determined, $r(t)$ and $p(t)$ also can be determined w.r.t. any value of t" <br>> initial configuration ($`r(t_0)`$ & $`p(t_0)`$) are _super_ important ! 
+- Deterministric <br> : "if position($r(t_0)$) and momentum($p(t_0)$) are determined, $r(t)$ and $p(t)$ also can be determined w.r.t. any value of t" <br>> initial configuration ($r(t_0)$ & $p(t_0)$) are _super_ important ! 
     - $\vec{F} = m\vec{a}=\frac{d\vec{p}}{dt}$ can be used to calculate a new $r(t)$ and $p(t)$ ! 
 
 - Phase Space
+<br>
 ![Phase Space Representation](https://upload.wikimedia.org/wikipedia/commons/e/ea/Simple_Harmonic_Motion_Orbit.gif)
 <br>(Source : Wikipedia)
 
@@ -102,21 +103,27 @@ It's still __USELESS__ ! (We cannot annalytically calculate Q)
         - $\alpha(o \to n)$ : probability of perfoming a trial move
         <br> (On our example, $\alpha(o \to n) = \alpha(n \to o)$)
         - $acc(o \to n)$ : probability of accepting a trial move
-    - Then, the detailed balance condition would be <br>
+    - Then, the detailed balance condition would be ![Equation0](./Figures/Figure0.png)
+    <!---
     $N(o) \times \alpha(o \to n) \times acc(o \to n) = N(n) \times \alpha(n \to o) \times acc (n \to o)$
     <br>
     $\frac{acc(o \to n)}{acc(n \to o)} = \frac{N(n)}{N(o)} = e^{-\beta [U(n) - U(o)]}$
+    --->
 
 - So that in Metropolis Algorithm,
+    - ![Equation1](./Figures/Figure1.png)
+    <!--- 
     - $acc(o \to n) = N(n)\ /\ N(o)$ if $U(n) < U(o)$
-    - $acc(o \to n)$ = 1 if $N(n) \ge N(o)$
-    - Which leads to
-    <br>
+    - $acc(o \to n)$ = 1 if $U(n) \ge U(o)$
+    --->
+    - Which leads to ![Equation2](./Figures/Figure2.png)
+    <!---
     $\pi(o \to n) = \alpha(o \to n)$ if $N(n) \ge N(o)$ 
     <br>
     $\pi(o \to n) = \alpha(o \to n)[N(n)/N(o)]$ if $N(n) \lt N(o)$
     <br>
     $\pi(o \to o) = 1 - \sum_{n \ne\ o} \pi(o \to n)$ 
+    --->
 
 - Our Goal is
     1. Choose a random spin $S_i$
