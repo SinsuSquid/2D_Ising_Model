@@ -125,9 +125,39 @@ It's still __USELESS__ ! (We cannot annalytically calculate Q)
     $\pi(o \to o) = 1 - \sum_{n \ne\ o} \pi(o \to n)$ 
     --->
 
+## Enough STORIES! Let's build an Ising model now !
 - Our Goal is
     1. Choose a random spin $S_i$
     2. Compute the energy change $\Delta E$ associated to the flip $S_i \to -S_i$
     3. Generate a random number $0 \le \xi \le 1$ with a uniform distribution
     4. If $\xi \lt e^{-\beta\Delta E}$ then flip the spin (accept), if not, leave it in its previous state (deny)
     5. Repeat.
+
+- The simpliest Ising Model
+    - First, distribute random spins on the lattice. (ranlux.f might help !)
+    - ![Ising Model](./Figures/Figure3.png)
+    - Magnetization & Energy for current configuration can be calculated with equations below.
+    - ![Mag & Eng](./Figures/Figure5.png)
+    - Let's say we want to calculate energy for the lattice at {3, 4} position.
+    - ![Sample Electron](./Figures/Figure4.png)
+    - We only have to consider the local environment. (It's an assumption !)
+    - ![Local Env.](./Figures/Figure6.png)
+    - ![Energy Calc.](./Figures/Figure7.png)
+      <!---
+      $E_{34} = H(local config.)$
+      <br>
+      $E_{34} = - \sum J S_i S_j$
+      <br>
+      $E_{34} = - J S_i \sum S_j$
+      <br>
+      $E_{34} = -1 \times (-1) \[(-1) + 1 + (-1) + 1\]$
+      <br>
+      $E_{34} = 0$
+      --->
+
+    - So,
+      - All tables are set now!
+      - It's your turn to make it happen.
+      - I recommend you to first think about strategies on how to solve this problem.
+      - Whenever you have a question, ask your teacher nearby.
+      - But keep it in mind! Be sure to make your question as __RIGID__ as possible.
