@@ -34,6 +34,7 @@
       WRITE(*,*) "  equilibration_step : ", equilibration_step
       WRITE(*,*) "  production_step : ", production_step
       WRITE(*,*) "  numEnsemble : ", numEnsemble
+      WRITE(*,*) "  linspace : ", linspace
       WRITE(*,*)
 
       ! Seed Setting

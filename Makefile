@@ -36,7 +36,17 @@ run :
 	nohup ./bin/main &> main.out &
 
 debug :
-	./bin/main
+	$(FC) ./src/global_variables.f90 \
+	      ./src/initialize.f90 \
+	      ./src/silent_ranlux.f \
+	      ./src/tools.f90 \
+	      ./src/core.f90 \
+	      ./src/debug.f90 \
+	      \
+	      -o ./bin/debug \
+	      -module ./mod/
+
+	./bin/debug
 
 clean :
 	rm -f ./dump/*
